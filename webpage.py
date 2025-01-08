@@ -156,7 +156,7 @@ def sidebar():
     st.sidebar.markdown(
     """
     <div style='text-align: center; margin-top: 18px;'>
-        <p style='color: gray;'> 2025, Made with 💜 by Dialogik.co </p>
+        <p style='color: gray;'> 2025, Made with 🖤 by Dialogik.co </p>
     </div>
     """,
     unsafe_allow_html=True
