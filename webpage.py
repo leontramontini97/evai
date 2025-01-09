@@ -132,7 +132,7 @@ def sidebar():
     """
     
     
-    ▶️ <a href="https://wa.me/573008208719" target="_blank">Estética Íntima</a>  <br>
+    ▶️ <a href="https://wa.me/573008208719" target="_blank">Contáctanos</a>  <br>
     
  
     📍 Cra 17a #15 - 92, CliPelvic, Barrio San Vicente, Valledupar
