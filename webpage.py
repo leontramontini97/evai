@@ -124,7 +124,7 @@ with st.container():
 # Sidebar functionalities
 def sidebar():
     
-    st.sidebar.image("LogoMercy2.png", width=100)
+    
     
     # Further Assistance Information
     st.sidebar.markdown("###  ¿Necesitas más información?")
