@@ -60,22 +60,7 @@ st.markdown("""
         .stApp {
             background-color: #FFFFFF;
         }
-        
-        /* Chat messages */
-        .stChatMessage {
-            border-radius: 15px;
-            border: 1px solid #E6E6FA;
-        }
-        
-        /* User message styling */
-        .stChatMessageContent {
-            background-color: #FFFFFF !important;
-        }
-        
-        /* Assistant message styling - light purple background */
-        [data-testid="stChatMessageContent"] {
-            background-color: #F8F6FF !important;
-        }
+
         
         /* Headers and important text */
         h1, h2, h3, h4, h5 {
