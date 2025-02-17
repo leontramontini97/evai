@@ -112,7 +112,7 @@ def sidebar():
     
     
     # Further Assistance Information
-    st.sidebar.markdown("<h3 style='color: #B355FF;'>¿Necesitas más información?</h3>", unsafe_allow_html=True)
+    
        
     st.sidebar.markdown(
     """
