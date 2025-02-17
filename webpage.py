@@ -50,7 +50,36 @@ else:
 
 
 
-st.set_page_config(page_title="Mercy LucIA", layout="wide", page_icon='❣️')
+st.set_page_config(
+    page_title="Mercy LucIA", 
+    layout="wide", 
+    page_icon='❣️',
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': None,
+        'Report a bug': None,
+        'About': None
+    }
+)
+
+# Force light theme
+st.markdown("""
+    <style>
+        [data-testid="stAppViewContainer"] {
+            background-color: #FFFFFF;
+        }
+        [data-testid="stSidebar"] {
+            background-color: #FFFFFF;
+        }
+        [data-testid="stHeader"] {
+            background-color: #FFFFFF;
+        }
+        .stApp {
+            background-color: #FFFFFF !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 # Add custom CSS with Clipelvic brand colors
@@ -113,7 +142,7 @@ def sidebar():
     
     # Further Assistance Information
     
-    st.sidebar.markdown("<h3 style='color: #B355FF;'>¿Necesitas más información?</h3>", unsafe_allow_html=True)
+    st.sidebar.markdown("<h3 style='color: #9932CC;'>¿Necesitas más información?</h3>", unsafe_allow_html=True)
        
     st.sidebar.markdown(
     """
