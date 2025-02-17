@@ -112,16 +112,16 @@ def sidebar():
     
     
     # Further Assistance Information
-    st.sidebar.markdown("###  ¿Necesitas más información?")
+    st.sidebar.markdown("<h3 style='color: #4B0082;'>¿Necesitas más información?</h3>", unsafe_allow_html=True)
        
     st.sidebar.markdown(
     """
     
     
-    ▶️ <a href="https://wa.me/573008208719" target="_blank">Contáctanos</a>  <br>
+    ▶️ <a href="https://wa.me/573008208719" target="_blank" style="color: #9932CC !important;">Contáctanos</a>  <br>
     
  
-    📍 Cra 17a #15 - 92, CliPelvic, Barrio San Vicente, Valledupar
+    📍 <span style="color: #333333;">Cra 17a #15 - 92, CliPelvic, Barrio San Vicente, Valledupar</span>
     """,
     unsafe_allow_html=True
 )
