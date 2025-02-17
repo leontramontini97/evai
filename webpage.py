@@ -50,7 +50,7 @@ else:
 
 
 
-st.set_page_config(page_title="EVA", layout="wide", page_icon='❣️')
+st.set_page_config(page_title="Mercy LucIA", layout="wide", page_icon='❣️')
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 # Add custom CSS with Clipelvic brand colors
@@ -97,7 +97,7 @@ with st.container():
         st.markdown(
             """
             <div style='text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: -10px; padding: 0px; width: 100%;'>
-                <h2>¡Hola! Soy EVA</h2>
+                <h2>¡Hola! Soy Mercy LucIA</h2>
                 <h5>Tu Especialista Virtual Artificial</h5>  
                 <h5>¡Estoy aquí para resolver tus dudas!</h5>
             </div>
@@ -184,10 +184,10 @@ def chat():
 
       
         common_responses = {
-    "hola": "Hola Corazón 💓. Soy EVA, Especialista Virtual con Inteligencia Artificial de la Dra. Mercy. Estoy aquí para ayudarte a resolver tus dudas sobre ginecología, sexualidad, piso pélvico, ginecología estética, y más ❤️ ",
+    "hola": "Hola Corazón 💓. Soy Mercy LucIA, Especialista Virtual con Inteligencia Artificial de la Dra. Mercy. Estoy aquí para ayudarte a resolver tus dudas sobre ginecología, sexualidad, piso pélvico, ginecología estética, y más ❤️ ",
     "gracias": "¡Con gusto! Si tienes otra consulta, estoy aquí para ayudarte 😊",
     "¿quién te creó?": "Fui creado por Dialogik, un equipo de expertos en tecnología y automatización para ayudarte en todo lo que necesites 📚🔧. Sin embargo, si se trata de una consulta médica, es mejor que la consultes directamente a ella. Soy un sistema de Ineligencia artificial y puedo cometer errores.",
-    "¿cuál es tu nombre?": "Mi nombre es EVA 💜, tu asistente virtual siempre disponible para ayudarte.",
+    "¿cuál es tu nombre?": "Mi nombre es Mercy LucIA 💜, tu asistente virtual siempre disponible para ayudarte.",
     "¿qué puedes hacer?": "Estoy entrenado para responder preguntas que puedas tener en relación con la preparación para cirugías para que estés lo mejor informado posible!",
     "¿eres un robot?": "Sí, soy un robot asistente virtual diseñado para ayudarte con información y consultas 👾",
     "¿trabajas las 24 horas?": "¡Así es! Estoy disponible las 24 horas del día, los 7 días de la semana, siempre listo para ayudarte 💪",}
