@@ -29,13 +29,16 @@ categories_dict = {
     7: "Saludos y otros",
 }
 
-def hash_phone_number(phone_number):
-    """Create a strong hash of a phone number for storage while preserving session functionality"""
-    # Use a secure hash with a salt (store this securely in production)
-    salt = os.getenv('HASH_SALT', 'default_salt_change_me')
-    # Create a hash of the phone number
-    hashed = hashlib.sha256((str(phone_number) + salt).encode()).hexdigest()
-    return hashed
+def anonymize_phone_number(phone_number):
+    """
+    Create a deterministic UUID from a phone number to maintain session continuity
+    while providing anonymization.
+    """
+    # Generate a UUID v5 using the phone number as the name
+    # UUID namespace is a fixed UUID (using the NAMESPACE_DNS here as a standard namespace)
+    # This ensures the same phone number always generates the same UUID
+    namespace = uuid.UUID('6ba7b810-9dad-11d1-80b4-00c04fd430c8')  # NAMESPACE_DNS
+    return str(uuid.uuid5(namespace, str(phone_number)))
 
 def classify_question(question):
     # This is for chat models like 'gpt-4o-mini', 'gpt-3.5-turbo', etc.
@@ -83,8 +86,8 @@ def classify_question(question):
 def log_conversation(session_id, question, answer):
     """Log a conversation to DynamoDB"""
     try:
-        # Hash the session_id (phone number) for storage while maintaining session tracking
-        hashed_session_id = hash_phone_number(session_id)
+        # Anonymize the session_id (phone number) for storage while maintaining session tracking
+        anonymized_session_id = anonymize_phone_number(session_id)
         
         # Get category for the question
         category = classify_question(question)
@@ -107,7 +110,7 @@ def log_conversation(session_id, question, answer):
         # Create item for DynamoDB
         item = {
             'id': next_id,
-            'session_id': hashed_session_id,  # Store hashed session_id
+            'session_id': anonymized_session_id,  # Store anonymized session_id
             'message_body': question,
             'response': answer,
             'category': category,
