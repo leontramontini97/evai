@@ -127,7 +127,7 @@ qa_prompt = ChatPromptTemplate.from_messages(
                     ]
              )
 
-retriever = retriever_func('Mercy_15_3.pdf')
+retriever = retriever_func('mercy.15.5.25.pdf')
 question_answer_chain = create_stuff_documents_chain(llm, qa_prompt)
 history_aware_retriever = create_history_aware_retriever(
         llm, retriever, contextualize_q_prompt
